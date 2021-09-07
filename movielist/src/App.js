@@ -28,7 +28,7 @@ function App() {
     })
 
 
-  }, []) // = componentDidMount
+  }, [] ) // = componentDidMount
 
   // DATA operations
 
@@ -46,8 +46,7 @@ function App() {
     // { title: "Happy" }
     const movieNew = {
       title: movieTitleNew,
-      //id: Date.now().toString() //=> 123564728191
-    }; // string => objekt
+    };
 
     // API => STATE => DOM
     fetch(API_URL, {
