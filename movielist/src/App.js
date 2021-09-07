@@ -84,8 +84,6 @@ function App() {
 
     if (!movieTitleNew) return; // ohne movie titel nix los!
 
-    // { title: "<title", id: 12345 }
-
     // API updaten
 
     const apiUpdateURL = `${API_URL}/${idToEdit}`
@@ -109,7 +107,7 @@ function App() {
       // UPDATE Movie in State
       const moviesUpdated = arrMovies.map(movie => {
         // movie to update found?
-        return (movie.id === idToEdit) ? { ...movie, title: movieTitleNew } : movie
+        return (movie.id === idToEdit) ? movieUpdatedApi : movie
       })
   
       setMovies( moviesUpdated )
